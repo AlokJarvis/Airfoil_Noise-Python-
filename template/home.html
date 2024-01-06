@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>AirFoil Prediction</h1>
+    
+    <form action="{{url_for('predict')}}" method="post">
+        <input type="text" name="frequency" placeholder="frequency" required><br>
+        <input type="text" name="Angle of Attack" placeholder="Angle of Attack" required><br>
+        <input type="text" name="Chord length" placeholder="Chord length" required><br>
+        <input type="text" name="Free Stream Velocity" placeholder="Free Strean Velocity" required><br>
+        <input type="text" name="Suction Side" placeholder="Suction Side" required><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    <br>
+    <br>
+    </div>
+    {{prediction_text}}
+</body>
+</html>
